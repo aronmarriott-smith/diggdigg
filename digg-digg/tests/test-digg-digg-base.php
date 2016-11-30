@@ -33,4 +33,12 @@ class Digg_Digg_Base_Test extends Digg_Digg_Plugin_UnitTestCase {
 	public function tearDown() {
 		parent::tearDown();
 	}
+
+	/**
+	* @Covers BaseDD::getButtonDesignLazy()
+	*/
+	public function test_button_design_is_returned() {
+		$this->assertEquals( $this->instance->getButtonDesignLazy( 'Normal' ), 'Normal' );
+		$this->assertEquals( $this->instance->getButtonDesignLazy( 'Compact' ), 'Compact' );
+	}
 }

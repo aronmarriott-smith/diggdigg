@@ -8,12 +8,12 @@
 /**
  * Digg_Digg_Base_Test
  */
-class Digg_Digg_Base_Test extends Digg_Digg_Plugin_UnitTestCase {
+class BaseDD_Test extends Digg_Digg_Plugin_UnitTestCase {
 
 	/**
 	 * Holds an instance of our plugin class.
 	 *
-	 * @var DDBase $instance
+	 * @var BaseDD $instance
 	 */
 	private $instance;
 
@@ -24,7 +24,7 @@ class Digg_Digg_Base_Test extends Digg_Digg_Plugin_UnitTestCase {
 		parent::setUp();
 
 		$base_url = '<a href="://api.example.com/share">example.com</a>';
-		$this->instance = new DDBase( 'Example', 'example.com', 'api.example.com', $base_url );
+		$this->instance = new BaseDD( 'Example', 'example.com', 'api.example.com', $base_url );
 	}
 
 	/**

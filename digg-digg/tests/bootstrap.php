@@ -15,8 +15,12 @@
 echo 'Welcome to the Digg Digg Plugin Test Suite' . PHP_EOL . PHP_EOL;
 
 // Activates this plugin in WordPress so it can be tested.
+$plugin_path = 'digg-digg/digg-digg/digg-digg.php';
+if ( false === strstr( dirname( __FILE__ ), 'digg-digg/digg-digg' ) ) {
+	$plugin_path = 'digg-digg/digg-digg.php';
+}
 $GLOBALS['wp_tests_options'] = array(
-	'active_plugins' => array( 'digg-digg/digg-digg.php' ),
+	'active_plugins' => array( $plugin_path ),
 );
 
 // If the develop repo location is defined (as WP_DEVELOP_DIR), use that
@@ -30,3 +34,4 @@ if ( false !== getenv( 'WP_DEVELOP_DIR' ) ) {
 
 // Include unit test base class.
 require_once dirname( __FILE__ ) . '/framework/class-digg-digg-plugin-test-case.php';
+

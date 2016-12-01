@@ -15,8 +15,8 @@
 echo 'Welcome to the Digg Digg Plugin Test Suite' . PHP_EOL . PHP_EOL;
 
 // Activates this plugin in WordPress so it can be tested.
-$plugin_path = 'digg-digg/digg-digg/digg-digg.php';
-if ( false === strstr( dirname( __FILE__ ), 'digg-digg/digg-digg' ) ) {
+$plugin_path = 'diggdigg/digg-digg/digg-digg.php';
+if ( false === strstr( dirname( __FILE__ ), 'diggdigg/digg-digg' ) ) {
 	$plugin_path = 'digg-digg/digg-digg.php';
 }
 $GLOBALS['wp_tests_options'] = array(
